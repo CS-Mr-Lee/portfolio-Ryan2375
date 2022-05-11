@@ -35,13 +35,14 @@ public class Round{
   */ 
   public Round(boolean isBombPlanted,boolean isBombDefused,boolean isTimeRunOut, boolean ctWin, boolean tWin,int tsAlive, int ctsAlive)
  {
-    this.isBombPlanted=false;
-    this.isBombDefused=false;
-    this.isTimeRunOut=false;
-    this.ctWin=false;
-    this.tWin=false;
-    this.tsAlive=5;
-    this.ctsAlive=5;
+    this.isBombPlanted=isBombPlanted;
+    this.isBombDefused=isBombDefused;
+    this.isTimeRunOut=isTimeRunOut;
+    this.ctWin=ctWin;
+    this.tWin=tWin;
+    this.tsAlive=tsAlive;
+    this.map= new Map("","","","","","","");
+    this.ctsAlive=ctsAlive;
   }
  
   //Accessors
@@ -80,8 +81,8 @@ public class Round{
   }
   
   /**Returns the round attributes*/
-  //Demonstration of dependence on another class. As it returns the map name which is from Map.java
+  //dependence on the Map Class
   public String toString(){
-    return "Bomb Planted: "+ this.isBombPlanted+"\n Bomb Defused: "+ this.isBombDefused+"\n Time RunOut: "+this.isTimeRunOut+ "\nctWin: "+this.ctWin+"\ntWin: "+this.tWin+"\ntsAlive: "+this.tsAlive+"\nctsAlive: "+this.ctsAlive+"MaP: "+ map.getName();
+    return "Bomb Planted: "+ this.isBombPlanted+"\n Bomb Defused: "+ this.isBombDefused+"\n Time RunOut: "+this.isTimeRunOut+ "\nctWin: "+this.ctWin+"\ntWin: "+this.tWin+"\ntsAlive: "+this.tsAlive+"\nctsAlive: "+this.ctsAlive+"\nMap: "+ map.getName();
   }
 }
