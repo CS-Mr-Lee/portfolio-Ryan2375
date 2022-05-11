@@ -42,11 +42,12 @@ public class Player{
       this.money=money;
       this.hsPercent=hsPercent;
       this.skill=skill;
+      this.round= new Round(false,false,false,false,false,5,5);
       this.t=round.getTsAlive();
       this.ct=round.getCtsAlive();
 
    }
-   
+  
    public String getUsername(){
       return this.username;
    }
