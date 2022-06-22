@@ -4,8 +4,9 @@
  */
 
 /**
- *
+ * Date: June 21, 2022  
  * @author ryan
+ * Tic tac toe game
  */
 import java.awt.Color;
 import javax.swing.JFrame;
@@ -15,25 +16,42 @@ public class TicTacToeGraphics extends javax.swing.JFrame {
     /**
      * Creates new form TicTacToeGraphics
      */
+    /**Starting player*/
     String letter = "X";
+    /**x score*/
     int x=0;
+    /**y score*/
     int o=0; 
+    /**is button 1 filled*/
     boolean b1Isfilled = false;
+    /**is button 2 filled*/
     boolean b2Isfilled = false;
+    /**is button 3 filled*/
     boolean b3Isfilled = false;
+    /**is button 4 filled*/
     boolean b4Isfilled = false;
+    /**is button 5 filled*/
     boolean b5Isfilled = false;
+    /**is button 6 filled*/
     boolean b6Isfilled = false;
+    /**is button 7 filled*/
     boolean b7Isfilled = false;
+    /**is button 8 filled*/
     boolean b8Isfilled = false;
+    /**is button 9 filled*/
     boolean b9Isfilled = false;
     
+    /**
+     * score
+     */
     public void score()
     {
         PlayerXWins.setText(String.valueOf(x));
         PlayerOWins.setText(String.valueOf(o));
     }
-    
+    /**
+     * whoseTurn
+     */
     public void whoseTurn()
     {
         if(letter.equalsIgnoreCase("X")) 
@@ -46,8 +64,13 @@ public class TicTacToeGraphics extends javax.swing.JFrame {
         }
     }
     
+    /**
+     * checkWin
+     * checks if someone won
+     */
     public void checkWin()
     {
+        //get the letter from each tile
         String tile1 = button1.getText();
         String tile2 = button2.getText();
         String tile3 = button3.getText();
@@ -58,6 +81,7 @@ public class TicTacToeGraphics extends javax.swing.JFrame {
         String tile8 = button8.getText();
         String tile9 = button9.getText();
         
+        //if statement for win conditions and a tie condition
         if (tile1 =="X" && tile2=="X" && tile3=="X")
         {
             x++;
@@ -228,7 +252,7 @@ public class TicTacToeGraphics extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     private JFrame frame;
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jFrame1 = new javax.swing.JFrame();
@@ -529,10 +553,12 @@ public class TicTacToeGraphics extends javax.swing.JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
-
-    private void button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button3ActionPerformed
+    }// </editor-fold>                        
+    
+    //fills in button 3 with x or o
+    private void button3ActionPerformed(java.awt.event.ActionEvent evt) {                                        
         button3.setText(letter);
+        //checks if button is already filled
         if (b3Isfilled==true){
             if(letter.equalsIgnoreCase("X")){
                 button1.setText("O");
@@ -546,10 +572,11 @@ public class TicTacToeGraphics extends javax.swing.JFrame {
         b3Isfilled = true;
         whoseTurn();
         checkWin();
-    }//GEN-LAST:event_button3ActionPerformed
-
-    private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
+    }                                       
+    //fills in button 2 with x or o
+    private void button2ActionPerformed(java.awt.event.ActionEvent evt) {                                        
         button2.setText(letter);
+        //checks if button is already filled
         if (b2Isfilled==true){
             if(letter.equalsIgnoreCase("X")){
                 button1.setText("O");
@@ -563,9 +590,10 @@ public class TicTacToeGraphics extends javax.swing.JFrame {
         b2Isfilled = true;
         whoseTurn();
         checkWin();
-    }//GEN-LAST:event_button2ActionPerformed
-
-    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+    }                                       
+    //fills in button 1 with x or o
+    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        //checks if button is already filled
         if (b1Isfilled==true){
             if(letter.equalsIgnoreCase("X")){
                 button1.setText("O");
@@ -583,10 +611,11 @@ public class TicTacToeGraphics extends javax.swing.JFrame {
         checkWin();
         
         
-    }//GEN-LAST:event_button1ActionPerformed
-
-    private void button9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button9ActionPerformed
+    }                                       
+    //fills in button 9 with x or o
+    private void button9ActionPerformed(java.awt.event.ActionEvent evt) {                                        
         button9.setText(letter); 
+        //checks if button is already filled
         if (b9Isfilled==true){
             if(letter.equalsIgnoreCase("X")){
                 button1.setText("O");
@@ -600,10 +629,11 @@ public class TicTacToeGraphics extends javax.swing.JFrame {
         b9Isfilled = true;
         whoseTurn() ;
         checkWin();
-    }//GEN-LAST:event_button9ActionPerformed
-
-    private void button8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button8ActionPerformed
+    }                                       
+    //fills in button 8 with x or o
+    private void button8ActionPerformed(java.awt.event.ActionEvent evt) {                                        
         button8.setText(letter); 
+        //checks if button is already filled
         if (b8Isfilled==true){
             if(letter.equalsIgnoreCase("X")){
                 button1.setText("O");
@@ -617,10 +647,11 @@ public class TicTacToeGraphics extends javax.swing.JFrame {
         b8Isfilled = true;
         whoseTurn() ;
         checkWin();
-    }//GEN-LAST:event_button8ActionPerformed
-
-    private void button7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button7ActionPerformed
-        button7.setText(letter); 
+    }                                       
+    //fills in button 7 with x or o
+    private void button7ActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        button7.setText(letter);
+        //checks if button is already filled
         if (b7Isfilled==true){
             if(letter.equalsIgnoreCase("X")){
                 button1.setText("O");
@@ -634,10 +665,11 @@ public class TicTacToeGraphics extends javax.swing.JFrame {
         b7Isfilled = true;
         whoseTurn() ;
         checkWin();
-    }//GEN-LAST:event_button7ActionPerformed
-
-    private void button4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button4ActionPerformed
+    }                                       
+    //fills in button 4 with x or o
+    private void button4ActionPerformed(java.awt.event.ActionEvent evt) {                                        
         button4.setText(letter);
+        //checks if button is already filled
         if (b4Isfilled==true){
             if(letter.equalsIgnoreCase("X")){
                 button1.setText("O");
@@ -651,9 +683,9 @@ public class TicTacToeGraphics extends javax.swing.JFrame {
         b4Isfilled = true;
         whoseTurn() ;
         checkWin();
-    }//GEN-LAST:event_button4ActionPerformed
-
-    private void newGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newGameActionPerformed
+    }                                       
+    //resets the game and stats
+    private void newGameActionPerformed(java.awt.event.ActionEvent evt) {                                        
 
         PlayerXWins.setText("0");
         PlayerOWins.setText("0");
@@ -690,18 +722,19 @@ public class TicTacToeGraphics extends javax.swing.JFrame {
         button7.setBackground(Color.WHITE);
         button8.setBackground(Color.WHITE);
         button9.setBackground(Color.WHITE);
-    }//GEN-LAST:event_newGameActionPerformed
-
-    private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
+    }                                       
+    
+    //quits the game
+    private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
         frame= new JFrame("Exit");
         if(JOptionPane.showConfirmDialog(frame,"Confirm if you want to exit","Tic Tac Toe",
             JOptionPane.YES_NO_OPTION )==JOptionPane.YES_NO_OPTION)
     {
         System.exit(0);
         }
-    }//GEN-LAST:event_exitButtonActionPerformed
-
-    private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
+    }                                          
+    //resets all the buttons to blank but keeps the stats
+    private void resetActionPerformed(java.awt.event.ActionEvent evt) {                                      
        
         button1.setText("");
         button2.setText("");
@@ -732,10 +765,11 @@ public class TicTacToeGraphics extends javax.swing.JFrame {
         button7.setBackground(Color.WHITE);
         button8.setBackground(Color.WHITE);
         button9.setBackground(Color.WHITE);
-    }//GEN-LAST:event_resetActionPerformed
-
-    private void button5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button5ActionPerformed
+    }                                     
+    //fills in button 5 with x or o
+    private void button5ActionPerformed(java.awt.event.ActionEvent evt) {                                        
         button5.setText(letter);
+        //checks if button is already filled
         if (b5Isfilled==true){
             if(letter.equalsIgnoreCase("X")){
                 button1.setText("O");
@@ -749,10 +783,11 @@ public class TicTacToeGraphics extends javax.swing.JFrame {
         b5Isfilled = true;
         whoseTurn();
         checkWin();
-    }//GEN-LAST:event_button5ActionPerformed
-
-    private void button6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button6ActionPerformed
+    }                                       
+    //fills in button 6 with x or o
+    private void button6ActionPerformed(java.awt.event.ActionEvent evt) {                                        
         button6.setText(letter);
+        //checks if button is already filled
         if (b6Isfilled==true){
             if(letter.equalsIgnoreCase("X")){
                 button1.setText("O");
@@ -766,34 +801,12 @@ public class TicTacToeGraphics extends javax.swing.JFrame {
         b6Isfilled = true;
         whoseTurn();
         checkWin();
-    }//GEN-LAST:event_button6ActionPerformed
+    }                                       
 
     /**
-     * @param args the command line arguments
+     * main
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TicTacToeGraphics.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TicTacToeGraphics.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TicTacToeGraphics.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TicTacToeGraphics.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -803,7 +816,7 @@ public class TicTacToeGraphics extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JLabel PlayerOWins;
     private javax.swing.JLabel PlayerXWins;
     private javax.swing.JButton button1;
@@ -830,5 +843,5 @@ public class TicTacToeGraphics extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JButton newGame;
     private javax.swing.JButton reset;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
